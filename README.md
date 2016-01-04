@@ -8,10 +8,10 @@ Usage:
   Execute `how does this work` in a POSIX-compatible shell for usage information.
   Some examples:
   
-    ```how do computers work
-    `how does grep work
-    `how does sudo work
-    `how to install Gentoo```
+    how do computers work
+    how does grep work
+    how does sudo work
+    how to install Gentoo
   
 Installation
 
