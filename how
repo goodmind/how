@@ -1,0 +1,34 @@
+#!/bin/sh
+# Rei <https://github.com/sovietspaceship/how>
+# MIT License
+if [ -z "$HOW_BROWSER" ]; then
+    HOW_BROWSER='links'
+fi
+search_url='https://google.com/search?q='
+
+browse() {
+    $HOW_BROWSER "${search_url}$*"
+}
+
+manpage() {
+    man $* 2>/dev/null
+    if [ $? -eq 0 ]; then
+        exit
+    fi
+}
+
+if [ -z "$1" ]; then
+    echo "usage: how do(es) thing work"
+    exit
+fi
+
+if echo $@ | grep -E 'do(es)? .* work\??' >/dev/null; then
+    thing=$(echo $@ | sed -e 's/\(.*\)work/\1/' | cut -d' ' -f2-)
+    if [ "$thing" = "this " ]; then
+        echo "usage: how do(es) thing work"
+        exit
+    fi
+    manpage "$thing"
+fi
+
+browse "how $@"
