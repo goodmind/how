@@ -1,19 +1,18 @@
 # how
-Problem solver
 
 `how` is a general-purpose problem solver. It can give you an answer to everything.
 
-Usage:
+## Usage
 
   Execute `how does this work` in a POSIX-compatible shell for usage information.
-  Some examples:
+### Some examples:
   
     how do computers work
     how does grep work
     how does sudo work
     how to install Gentoo
-  
-Installation
+
+## Installation
 
   Execute `how to install how` to know how to install how. Or just `make install` (and `make remove` to remove).
   
