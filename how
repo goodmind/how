@@ -2,7 +2,7 @@
 # Rei <https://github.com/sovietspaceship/how>
 # MIT License
 if [ -z "$HOW_BROWSER" ]; then
-    HOW_BROWSER='links'
+    HOW_BROWSER=$(which xdg-open || which open || which echo)
 fi
 search_url='https://google.com/search?q='
 
